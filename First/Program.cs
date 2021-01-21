@@ -1,12 +1,18 @@
 ﻿using System;
 
-namespace First
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
+        Console.WriteLine("3 или 4?");
+        if (int.TryParse(Console.ReadLine(), out var number)) {
+            if (number == 3) {
+                Exercise3.Main();
+            } else if (number == 4) {
+                Exercise4.Main();
+            }
         }
+        Console.WriteLine("\nPress any key to exit.");
+        Console.ReadKey();
     }
 }
